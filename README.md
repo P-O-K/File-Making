@@ -29,5 +29,5 @@ Call Examples:
                                                    ARG1            ARG2            ARG3
     NOTE                                      -> ( default,       default,        default )
     NOTE myNote.txt                           -> ( filename,      default,        default )
-    NOTE .\aNewPyApp Notepad                  -> ( extended-dir,  software,       default )
+    NOTE .\aNewFolder Notepad                 -> ( extended-dir,  software,       default )
     NOTE Sublime.exe pyApp.py C:\DEV\Python   -> ( software,      filename,       explicit-dir )
