@@ -1,5 +1,5 @@
 
-File Taking Application :: WINDOWS :: run in CMD
+File Taking Application :: WINDOWS :: run in PowerShell or CMD
 
 To use -> Add file directory to system path and call via command line eg.. File fileName.txt
 
@@ -9,15 +9,21 @@ File app can take between 0-3 arguments( DIRECTORY, FILENAME, SOFTWARE ) in any 
             Requires either:
                      An explicit full path( C:\foldernameA\foldernameB ) or,
                      An extension to the CWD( .\foldernameA\foldernameB ).
+                     
+                     If the dir doesn't exist a prompt will be given to make it.
+
 
     File argument:
             Requires:
                     Extension type( .txt | .py | .html | .bat | ect.. )  eg.. myNote.txt, application.py
 
+
     Software argument:
             Requires either:
                     The name if the software alone if the program is aware of it IE( Notepad ), or
                     The name of the desired program with .exe extension IE( otherSoftware.exe )
+                    
+                    System knowledge of .exe program required!
 
 
     Any Argument duplicates will use the 1st given argument.
