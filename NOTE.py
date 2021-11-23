@@ -133,6 +133,7 @@ class SoftwareProcesser( object ):
 
     _KNOWNSOFTWARE  :dict   = { 'notepad':'Notepad.exe', 'sublime':'Sublime_text.exe' };
     _software       :str    = 'Notepad.exe';
+    _runState       :bool   = True;
 
 
     def __init__( self ):
@@ -155,6 +156,11 @@ class SoftwareProcesser( object ):
             if( arg.lower( ) in self._KNOWNSOFTWARE ):
                 self._software = self._KNOWNSOFTWARE[ sArgv.pop( sArgv.index( arg ) ).lower( ) ];
                 break; 
+
+            if( 'NONE' in arg.upper( ) ):
+                sArgv.pop( sArgv.index( arg ) )
+                self._runState = False;
+
 
 
 
@@ -194,7 +200,8 @@ def main( ):
         if( not ENV_F.fileExists( argParser._directory, argParser._filename ) ):
             ENV_F.MKFILE( argParser._directory, argParser._filename );
 
-        ENV_F.openFileIn( argParser._software, argParser._directory, argParser._filename )
+        if( argParser._runState ):
+            ENV_F.openFileIn( argParser._software, argParser._directory, argParser._filename )
 
 
 if __name__ == '__main__':
