@@ -1,9 +1,9 @@
 
-Note Taking Application :: WINDOWS :: run in CMD
+File Taking Application :: WINDOWS :: run in CMD
 
-To use -> Add file directory to system path and call via command line eg.. NOTE myNote.txt
+To use -> Add file directory to system path and call via command line eg.. File fileName.txt
 
-Note app can take between 0-3 arguments( DIRECTORY, FILENAME, SOFTWARE ) in any given order.
+File app can take between 0-3 arguments( DIRECTORY, FILENAME, SOFTWARE ) in any given order.
 
     Directory argument:
             Requires either:
@@ -12,7 +12,7 @@ Note app can take between 0-3 arguments( DIRECTORY, FILENAME, SOFTWARE ) in any 
 
     File argument:
             Requires:
-                    Extension type( .txt | .py | .html | .bat | ect.. )  eg.. myNewNote.txt
+                    Extension type( .txt | .py | .html | .bat | ect.. )  eg.. myNote.txt, application.py
 
     Software argument:
             Requires either:
@@ -27,7 +27,7 @@ Note app can take between 0-3 arguments( DIRECTORY, FILENAME, SOFTWARE ) in any 
 Call Examples:
 
                                                    ARG1            ARG2            ARG3
-    NOTE                                      -> ( default,       default,        default )
-    NOTE myNote.txt                           -> ( filename,      default,        default )
-    NOTE .\aNewFolder Notepad                 -> ( extended-dir,  software,       default )
-    NOTE Sublime.exe pyApp.py C:\DEV\Python   -> ( software,      filename,       explicit-dir )
+    FILE                                      -> ( default,       default,        default )
+    FILE myNote.txt                           -> ( filename,      default,        default )
+    FILE .\aNewFolder Notepad                 -> ( extended-dir,  software,       default )
+    FILE Sublime.exe pyApp.py C:\DEV\Python   -> ( software,      filename,       explicit-dir )
